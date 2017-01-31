@@ -27,6 +27,13 @@ const req = {
 
 This file get the return of `index.js`, download the image on `./images/` dir and set her as your background image.
 
+After clone it, run:
+
+```sh
+$ cd ./photo-of-the-day
+$ ./getDesktopBG.sh
+```
+
 ---
 
 Well, this is it. Those is just the first steps. Already is something.
