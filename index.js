@@ -1,31 +1,25 @@
 'use strict';
 
 const http = require('http');
-const natgeo = "http://www.nationalgeographic.com/photography/photo-of-the-day/";
-const options = require('./options');
+const req  = "http://www.nationalgeographic.com/photography/photo-of-the-day/";
 
-// this could not be another
-options.path = natgeo;
-
-http.get(options, (res) => {
+http.get(req, (res) => {
 
   res.setEncoding('utf8')
   res.on('error', console.error)
 
   let content = '';
   res.on('data', (chuck) => content += chuck)
+
   res.on('end', () => {
-
-    let result = content.match(/meta property="og:image" content="(.*)"/);
-    if (!result) {
-      console.log('nada');
-      return;
+    try {
+      let result = content.match(/meta property="og:image" content="(.*)"/);
+      result = result[0].match(/content="(.*)"/);
+      console.log(result[1]);
+    } catch (e) {
+      console.log(e.message);
+      process.exit(1);
     }
-
-    result = result[0].match(/content="(.*)"/);
-
-    console.log(result[1]);
-
   })
 
 }).on('error', console.error)

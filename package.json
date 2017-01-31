@@ -1,0 +1,25 @@
+{
+  "name": "photo-of-the-day",
+  "version": "0.0.1",
+  "description": "Download and set National Geographic's Photo Of The Day as desktop background",
+  "main": "getDesktopBG.sh",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabsprates/photo-of-the-day.git"
+  },
+  "keywords": [
+    "natgeo",
+    "background",
+    "images",
+    "desktop"
+  ],
+  "author": "Gabriel Prates <gabsprates@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabsprates/photo-of-the-day/issues"
+  },
+  "homepage": "https://github.com/gabsprates/photo-of-the-day#readme"
+}
