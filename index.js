@@ -1,7 +1,7 @@
 'use strict';
 
-const http = require('http');
-const req  = "http://www.nationalgeographic.com/photography/photo-of-the-day/";
+const http = require('https');
+const req  = "https://www.nationalgeographic.com/photography/photo-of-the-day/";
 
 http.get(req, (res) => {
 
