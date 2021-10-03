@@ -1,7 +1,7 @@
 'use strict';
 
 const http = require('https');
-const req  = "https://www.nationalgeographic.com/photography/photo-of-the-day/";
+const req  = "https://www.nationalgeographic.com/photo-of-the-day/";
 
 http.get(req, (res) => {
 
@@ -13,7 +13,7 @@ http.get(req, (res) => {
 
   res.on('end', () => {
     try {
-      let result = content.match(/meta property="og:image" content="(.*)"/);
+      let result = content.match(/<meta ([^>]*)property="og:image" content="([^\"]*)"/);
       result = result[0].match(/content="(.*)"/);
       console.log(result[1]);
     } catch (e) {
