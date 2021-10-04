@@ -1,31 +1,21 @@
 # :camera::earth_africa::blowfish: Photo of the Day :sunrise_over_mountains::date:
 
+
 ** Made to [Gnome](https://www.gnome.org/) interface, but I accept pull requests :smile:
 
-This is a initial idea to save the National Geographic's Photo Of The Day. I love this photos, then I can set them as my desktop background image, what I did before manually.
+This is a initial idea to save the National Geographic's Photo Of The Day. I love these photos, then I can set them as my desktop background image, what I did before manually.
 
+NatGeo Photo of the Day: https://www.nationalgeographic.com/photo-of-the-day/
 
 ## How to use
 
-### `index.js` file
-
-This file make the request to the NatGeo server and returns the image url. Initially, the var `req` is the URL from the photo page, but if you need to set any other thing to make requests with NodeJS, you can change it to an object, like this:
-
-```js
-// original
-const req = "http://www.nationalgeographic.com/photography/photo-of-the-day/";
-
-// with any configuration
-const req = {
-  host: "your proxy ip, for exemple",
-  port: "your proxy port, for exemple",
-  path: "http://www.nationalgeographic.com/photography/photo-of-the-day/"
-}
-```
-
 ### `getDesktopBG.sh` file
 
-This file get the return of `index.js`, download the image on `./images/` dir and set her as your background image.
+This file:
+- makes the request to the NatGeo server and returns the image url;
+- downloads the found image to `./images/` dir;
+- changes the Gnome background to be the downloaded NetGeo's image of the day.
+
 
 After clone it, run:
 
